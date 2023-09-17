@@ -1,0 +1,12 @@
+{
+	"name": "42-libasm",
+	"dockerFile": "./Dockerfile",
+	"forwardPorts": [],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+	},
+	"extensions": [
+		"PKief.material-icon-theme"
+	],
+	"workspaceFolder": "/workspaces/42-libasm/source" // change 42-ft_transendence to name of repo when copied
+}
