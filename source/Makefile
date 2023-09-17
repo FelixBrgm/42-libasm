@@ -22,3 +22,4 @@ fclean: clean tclean
 
 test: all
 	gcc main.c -L -$(NAME) -o $(EXECUTABLE_TESTER)
+	./$(EXECUTABLE_TESTER)
