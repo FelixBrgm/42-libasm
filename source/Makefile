@@ -12,14 +12,16 @@ $(NAME):
 	ar rcs $(NAME) $(O_FILES)
 
 clean:
-	rm $(O_FILES)
+	-rm $(O_FILES)
 
 tclean:
-	rm $(EXECUTABLE_TESTER)
+	-rm $(EXECUTABLE_TESTER)
 
 fclean: clean tclean
-	rm $(NAME)
+	-rm $(NAME)
+
+re: fclean $(NAME)
 
 test: all
-	gcc main.c -L -$(NAME) -o $(EXECUTABLE_TESTER)
+	gcc main.c -L. $(NAME) -o $(EXECUTABLE_TESTER) # -g
 	./$(EXECUTABLE_TESTER)
