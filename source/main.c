@@ -1,8 +1,12 @@
 #include <stdio.h>
 
-extern int ft_strlen(const char *str);
+extern int ft_strlen( char *str);
+
 int main()
 {
-    printf("Erg: %i\n", ft_strlen("Hello"));
+    printf("------------------\n");
+    printf("Tester start...\n");
+    printf("ft_strlen:\n");
+    printf("\t'some words' -> 10 | %i\n",ft_strlen("some words"));
     return (0);
 }
