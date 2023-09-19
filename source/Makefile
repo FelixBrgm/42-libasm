@@ -1,4 +1,4 @@
-S_FILES := ft_strlen.s ft_strcpy.s
+S_FILES := ft_strlen.s ft_strcpy.s ft_strcmp.s
 O_FILES := $(S_FILES:.s=.o)
 
 NAME := libasm.a
