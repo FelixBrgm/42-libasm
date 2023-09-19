@@ -22,6 +22,6 @@ fclean: clean tclean
 
 re: fclean $(NAME)
 
-test: all
+test: re
 	gcc main.c -L. $(NAME) -o $(EXECUTABLE_TESTER) # -g
 	./$(EXECUTABLE_TESTER)
