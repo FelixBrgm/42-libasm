@@ -1,4 +1,4 @@
-S_FILES := ft_strlen.s
+S_FILES := ft_strlen.s ft_strcpy.s
 O_FILES := $(S_FILES:.s=.o)
 
 NAME := libasm.a
@@ -8,7 +8,9 @@ EXECUTABLE_TESTER := tester
 all: $(NAME)
 
 $(NAME):
-	nasm -f elf64 $(S_FILES)
+	nasm -f elf64 ft_strlen.s
+	nasm -f elf64 ft_strcpy.s
+	nasm -f elf64 ft_strcmp.s
 	ar rcs $(NAME) $(O_FILES)
 
 clean:
