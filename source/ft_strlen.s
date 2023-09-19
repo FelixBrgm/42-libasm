@@ -13,4 +13,6 @@ ft_strlen:
     inc rdi
     jmp .loop
 .found_end:
+    test rax, rax
+    jz .found_end
     ret
