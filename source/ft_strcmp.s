@@ -2,18 +2,20 @@ section .text
     global ft_strcmp
 
 ft_strcmp:
-    ; xor rcx, rcx
-    xor rax, rax
+    xor rcx, rcx
 .loop:
-    mov al, [rdi]
-    mov bl, [rsi]
+    xor rax, rax
+    xor rbx, rbx
+    mov al, [rdi + rcx]
+    mov bl, [rsi + rcx]
+    inc rcx
     test al, al
     jz .done
     test bl, bl
     jz .done
     
-    cmp rax, rbx
-    je .loop
-.done:
     sub rax, rbx
+    test rax, rax
+    jz .loop
+.done:
     ret
