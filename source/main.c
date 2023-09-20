@@ -23,8 +23,8 @@ int main()
     printf("ft_strcmp:\n");
     printf("\t Should be -3 %i\n", ft_strcmp(s1, s2));
     printf("\t Should be  3 %i\n", ft_strcmp(s2, s1));
-    // printf("\t Should be  0 %i\n", ft_strcmp(s3, s1));
+    printf("\t Should be  0 %i\n", ft_strcmp(s3, s1));
     
-    printf("STRING: |%s|", ft_strdup("TEST"));
+    // printf("STRING: |%s|", ft_strdup("TEST"));
     return (0);
 }
