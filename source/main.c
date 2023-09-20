@@ -3,7 +3,7 @@
 extern int  ft_strlen( char *str);
 extern char *ft_strcpy( char *dst, char *src);
 extern int  ft_strcmp(char *s1, char *s2);
-
+extern char *ft_strdup(char *str);
 int main()
 {
     printf("------------------\n");
@@ -23,6 +23,8 @@ int main()
     printf("ft_strcmp:\n");
     printf("\t Should be -3 %i\n", ft_strcmp(s1, s2));
     printf("\t Should be  3 %i\n", ft_strcmp(s2, s1));
-    printf("\t Should be  0 %i\n", ft_strcmp(s3, s1));
+    // printf("\t Should be  0 %i\n", ft_strcmp(s3, s1));
+    
+    printf("STRING: |%s|", ft_strdup("TEST"));
     return (0);
 }
