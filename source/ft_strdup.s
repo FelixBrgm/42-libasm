@@ -1,6 +1,6 @@
 section .text
     global ft_strdup
-    extern _malloc
+    extern malloc
 
 extern ft_strlen
 extern ft_strcpy
@@ -12,7 +12,7 @@ ft_strdup:
     mov rdx, rdi
 
     mov rdi, rax
-    call _malloc
+    call malloc wrt ..plt  
     test rax, rax
     jz .done
                     ; malloc is in rax and src is in rdx

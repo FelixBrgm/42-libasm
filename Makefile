@@ -1,7 +1,7 @@
 NAME := libasm.a
 
 S_DIR = source
-S_FILES := ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
+S_FILES := ft_strdup.s ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
 S_FILES := $(addprefix $(S_DIR)/, $(S_FILES))
 
 OBJ_DIR := build
@@ -28,5 +28,10 @@ fclean: clean
 	@echo "Fcleaned"
 
 re: fclean $(NAME)
+
+test: re
+	@gcc -Wall -Wextra -Werror  source/main.c $(NAME) -o test
+	@./test
+	@rm -f test
 
 .PHONY: all clean fclean re
