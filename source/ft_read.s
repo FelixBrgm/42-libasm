@@ -8,7 +8,7 @@ ft_read:                            ; rax is used to provide the system call num
     test rax, rax       
     js .error
     ret
-.error
+.error:
     NEG rax                         ; rax *= -1
     push rax                        ; save rax on stack
 

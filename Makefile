@@ -29,9 +29,9 @@ fclean: clean
 
 re: fclean $(NAME)
 
-test: re
-	@gcc -Wall -Wextra -Werror  source/main.c $(NAME) -o test
-	@./test
-	@rm -f test
+main: re
+	@gcc -Wall -Wextra -Werror  source/main.c $(NAME) -o main
+	@./main
+	@rm -f main
 
 .PHONY: all clean fclean re
