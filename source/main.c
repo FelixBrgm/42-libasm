@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 extern int  ft_strlen( char *str);
 extern char *ft_strcpy( char *dst, char *src);
 extern int  ft_strcmp(char *s1, char *s2);
@@ -25,6 +26,11 @@ int main()
     printf("\t Should be  3 %i\n", ft_strcmp(s2, s1));
     printf("\t Should be  0 %i\n", ft_strcmp(s3, s1));
     
-    printf("STRING: |%s|", ft_strdup("TEST"));
+    printf("ft_strdup:\n");
+    char *s4 = "";
+    char *s5 = "TestString";
+    printf("\t strdup: |%s|, ft_strdup: |%s|\n", strdup(s4), ft_strdup(s4));
+    printf("\t strdup: |%s|, ft_strdup: |%s|\n", strdup(s5), ft_strdup(s5));
+
     return (0);
 }
