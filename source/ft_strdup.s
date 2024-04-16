@@ -11,7 +11,7 @@ ft_strdup:
     push    rdi                 ; save rdi on the stack
 
     mov     rdi, rax            ; rdi = rax(len)
-    call    malloc wrt ..plt  
+    call    malloc wrt ..plt    ; wrt - With Respect To PLT
     test    rax, rax            ; if rax == NULL, ret
     jz      .done
 
@@ -19,6 +19,6 @@ ft_strdup:
     mov rsi, rdi                ; rsi = rdi(str)
     mov rdi, rax                ; rdi = rax(new_str)
 
-    call ft_strcpy
+    call ft_strcpy              ; ft_strcpy(rdi, rsi)
 .done:
     ret
