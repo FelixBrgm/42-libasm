@@ -60,9 +60,10 @@ int main()
     ft_write(1, "\n", 1);
 
     printf("Tester end...\n");
-    printf("Return value: %li\n", ft_read(0, NULL, 0));
+    printf("Return value: %li\n", ft_read(5, NULL, 0));
     printf("Errorno: %i\n", errno);
-    printf("Return value: %li\n", read(0, NULL, 0));
+    errno = 0;
+    printf("Return value: %li\n", read(5, NULL, 0));
     printf("Errorno: %i\n", errno);
 
     return (0);
